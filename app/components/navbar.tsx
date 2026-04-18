@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -12,15 +12,30 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      navLinks.forEach((link) => {
+        const section = document.querySelector(link.href);
+        if (section) {
+          const top = (section as HTMLElement).offsetTop - 100;
+          if (window.scrollY >= top) {
+            setActive(link.href);
+          }
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#1f1c1d]/70 border-b border-white/10">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-[#edd9c0]/30">
       <div className="max-w-[1240px] mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <div className="text-[#edd9c0] font-semibold text-lg tracking-wide">
-          Cafepreneurs
-        </div>
+        <img src="/logo.png" className="w-[120px]" alt="logo" />
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
@@ -28,7 +43,11 @@ export default function Header() {
             <a
               key={i}
               href={link.href}
-              className="text-[#edd9c0]/70 hover:text-[#edd9c0] text-sm transition"
+              className={`text-sm transition ${
+                active === link.href
+                  ? "text-[#1f1c1d] font-semibold"
+                  : "text-[#000]/60 hover:text-black"
+              }`}
             >
               {link.name}
             </a>
@@ -38,16 +57,13 @@ export default function Header() {
         {/* CTA */}
         <a
           href="#reserve"
-          className="hidden md:inline-block bg-[#edd9c0] text-[#1f1c1d] px-6 py-2 rounded-full text-sm font-semibold hover:bg-white transition"
+          className="hidden md:inline-block bg-[#1f1c1d] text-[#edd9c0] px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
         >
           Book Now
         </a>
 
         {/* Mobile Toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-[#edd9c0]"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden">
           {open ? <X /> : <Menu />}
         </button>
       </div>

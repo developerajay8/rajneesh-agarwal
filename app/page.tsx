@@ -10,6 +10,8 @@ import WhatYouGet from "./components/whatyouget";
 import FAQ from "./components/faq";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import ShowcaseSection from "./components/showcasesection";
+import FeaturesSection from "./components/featuressection";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Bonuses />
       <WhyShouldAttend />
       <AboutCoach />
+      <ShowcaseSection/>
+      <FeaturesSection/>
       <Services />
       <WhatYouGet />
       <FAQ />

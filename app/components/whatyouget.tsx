@@ -44,46 +44,54 @@ const items = [
 
 export default function WhatYouGet() {
   return (
-    <section className="bg-gradient-to-b from-[#f3e4cf] to-[#edd9c0] py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-[#0b0f0c] py-28 px-6 overflow-hidden">
+      
+      {/* Green Glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-green-500/10 blur-[140px] rounded-full" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-[#6b5b52] text-xs tracking-[0.3em] uppercase mb-4">
+        <div className="text-center mb-20">
+          <p className="text-green-300/40 text-xs tracking-[0.4em] uppercase mb-4">
             Everything Included
           </p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#1f1c1d]">
-            What You'll <span className="italic">Get Access To</span>
+
+          <h2 className="text-4xl md:text-6xl font-semibold text-green-100 leading-tight">
+            What You'll{" "}
+            <span className="italic text-green-400">Get Access To</span>
           </h2>
-          <div className="w-16 h-[2px] bg-[#1f1c1d] mx-auto mt-6 opacity-30" />
+
+          <div className="w-20 h-[2px] bg-green-400/40 mx-auto mt-6" />
         </div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const Icon = item.icon;
             return (
               <div
                 key={i}
-                className="group relative bg-white/40 backdrop-blur-xl border border-white/30 rounded-2xl p-6 transition-all duration-500 hover:bg-[#1f1c1d] hover:scale-[1.04] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+                className="group relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-7 transition-all duration-500 hover:border-green-400/40 hover:scale-[1.04] overflow-hidden"
               >
-                {/* Glow */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-white/10 to-transparent" />
+
+                {/* Hover Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-green-400/10 to-transparent rounded-2xl" />
 
                 {/* Icon */}
-                <div className="mb-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1f1c1d]/5 group-hover:bg-[#edd9c0] transition">
-                    <Icon className="w-6 h-6 text-[#1f1c1d]" />
+                <div className="mb-5">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-400/10 group-hover:bg-green-400/20 transition">
+                    <Icon className="w-6 h-6 text-green-400" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-[#1f1c1d] group-hover:text-[#edd9c0] mb-2 transition">
+                <h3 className="text-lg font-semibold text-green-100 mb-2 group-hover:text-green-300 transition">
                   {item.title}
                 </h3>
 
                 {/* Desc */}
-                <p className="text-sm text-[#5c514a] leading-relaxed group-hover:text-[#edd9c0]/80 transition">
+                <p className="text-sm text-green-200/60 leading-relaxed group-hover:text-green-200/80 transition">
                   {item.desc}
                 </p>
               </div>
@@ -92,8 +100,8 @@ export default function WhatYouGet() {
         </div>
 
         {/* Bottom Note */}
-        <div className="mt-16 text-center">
-          <p className="text-[#4e3e36] text-sm">
+        <div className="mt-20 text-center">
+          <p className="text-green-300/30 text-sm tracking-wide">
             Everything you need to start & scale your food business — all in one place.
           </p>
         </div>

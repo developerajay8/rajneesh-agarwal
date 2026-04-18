@@ -4,99 +4,93 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-gradient-to-b from-[#1f1c1d] to-[#2a2526] py-24 px-6">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section id="contact" className="relative bg-[#0b0f0c] py-28 px-6 overflow-hidden">
+      
+      {/* Green Glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-green-500/10 blur-[140px] rounded-full" />
+
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-[#edd9c0]/50 text-xs tracking-[0.3em] uppercase mb-4">
+          <p className="text-green-300/40 text-xs tracking-[0.4em] uppercase mb-4">
             Contact Us
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#edd9c0] mb-6">
+          <h2 className="text-4xl md:text-6xl font-semibold text-green-100 mb-6 leading-tight">
             Let’s Build Your{" "}
-            <span className="italic text-[#c9a96e]">Cafe Business</span>
+            <span className="italic text-green-400">Cafe Business</span>
           </h2>
 
-          <p className="text-[#edd9c0]/70 leading-relaxed mb-8">
+          <p className="text-green-200/70 leading-relaxed mb-10">
             Have questions about starting or scaling your cafe?  
             Reach out and we’ll guide you with the right strategy — no confusion, no fluff.
           </p>
 
           {/* Contact Info */}
-          <div className="space-y-5">
+          <div className="space-y-6">
 
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
-                <Phone className="w-5 h-5 text-[#c9a96e]" />
-              </div>
-              <p className="text-[#edd9c0]/80 text-sm">+91 77330 86753</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
-                <Mail className="w-5 h-5 text-[#c9a96e]" />
-              </div>
-              <p className="text-[#edd9c0]/80 text-sm">cafepreneurs@gmail.com</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
-                <MapPin className="w-5 h-5 text-[#c9a96e]" />
-              </div>
-              <p className="text-[#edd9c0]/80 text-sm">Jaipur, India</p>
-            </div>
+            {[
+              { icon: Phone, text: "+91 77330 86753" },
+              { icon: Mail, text: "cafepreneurs@gmail.com" },
+              { icon: MapPin, text: "Jaipur, India" },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div key={i} className="flex items-center gap-4 group">
+                  <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-green-400/40 transition">
+                    <Icon className="w-5 h-5 text-green-400" />
+                  </div>
+                  <p className="text-green-200/80 text-sm">{item.text}</p>
+                </div>
+              );
+            })}
           </div>
 
-          {/* Small Note */}
-          <p className="text-[#edd9c0]/40 text-xs mt-8">
+          <p className="text-green-300/30 text-xs mt-10">
             We usually respond within 24 hours.
           </p>
         </div>
 
         {/* RIGHT FORM */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
 
-          <h3 className="text-[#edd9c0] text-xl font-semibold mb-6">
+          <h3 className="text-green-100 text-xl font-semibold mb-6">
             Send a Message
           </h3>
 
-          <form className="space-y-5">
+          <form className="space-y-6">
 
-            {/* Name */}
             <div>
-              <label className="text-xs text-[#edd9c0]/50">Full Name</label>
+              <label className="text-xs text-green-300/50">Full Name</label>
               <input
                 type="text"
                 placeholder="Enter your name"
-                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#1f1c1d] border border-white/10 text-[#edd9c0] placeholder:text-[#edd9c0]/30 focus:outline-none focus:border-[#c9a96e]"
+                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#0f1411] border border-white/10 text-green-100 placeholder:text-green-300/30 focus:outline-none focus:border-green-400"
               />
             </div>
 
-            {/* Email */}
             <div>
-              <label className="text-xs text-[#edd9c0]/50">Email</label>
+              <label className="text-xs text-green-300/50">Email</label>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#1f1c1d] border border-white/10 text-[#edd9c0] placeholder:text-[#edd9c0]/30 focus:outline-none focus:border-[#c9a96e]"
+                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#0f1411] border border-white/10 text-green-100 placeholder:text-green-300/30 focus:outline-none focus:border-green-400"
               />
             </div>
 
-            {/* Message */}
             <div>
-              <label className="text-xs text-[#edd9c0]/50">Message</label>
+              <label className="text-xs text-green-300/50">Message</label>
               <textarea
                 rows={4}
                 placeholder="Tell us about your plan..."
-                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#1f1c1d] border border-white/10 text-[#edd9c0] placeholder:text-[#edd9c0]/30 focus:outline-none focus:border-[#c9a96e]"
+                className="w-full mt-2 px-4 py-3 rounded-xl bg-[#0f1411] border border-white/10 text-green-100 placeholder:text-green-300/30 focus:outline-none focus:border-green-400"
               />
             </div>
 
-            {/* Button */}
             <button
               type="submit"
-              className="w-full bg-[#edd9c0] text-[#1f1c1d] font-semibold py-3 rounded-full hover:bg-white transition-all duration-300"
+              className="w-full bg-green-400 text-[#052e1a] font-semibold py-3 rounded-full hover:bg-green-300 hover:scale-105 transition-all duration-300 shadow-lg"
             >
               Send Message →
             </button>

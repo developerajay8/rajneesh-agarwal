@@ -10,7 +10,7 @@ const bonuses = [
   {
     num: "01",
     title: "Menu Designing Template",
-    desc: "High-converting menu templates used by top cafes to increase order value & sales.",
+    desc: "High-converting menu templates to increase order value & sales.",
     worth: "₹12,000",
     price: "FREE",
     icon: ClipboardList,
@@ -18,7 +18,7 @@ const bonuses = [
   {
     num: "02",
     title: "Staff Agreement Format",
-    desc: "Ready-to-use legal agreement to hire staff professionally and avoid future conflicts.",
+    desc: "Ready-to-use legal agreement to hire staff professionally.",
     worth: "₹7,999",
     price: "FREE",
     icon: FileText,
@@ -26,7 +26,7 @@ const bonuses = [
   {
     num: "03",
     title: "Productivity Secrets",
-    desc: "Proven systems to manage your cafe efficiently & save time while boosting profits.",
+    desc: "Systems to manage your cafe efficiently & boost profits.",
     worth: "₹10,000",
     price: "FREE",
     icon: Zap,
@@ -35,18 +35,18 @@ const bonuses = [
 
 export default function Bonuses() {
   return (
-    <section className="bg-[#1f1c1d] py-24 px-6">
+    <section className="bg-[#0b0f0e] py-24 px-6 text-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-[#edd9c0]/50 text-xs tracking-[0.3em] uppercase mb-4">
+          <p className="text-green-400 text-xs tracking-[0.3em] uppercase mb-4">
             Exclusive Tools
           </p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#edd9c0]">
-            Free <span className="italic text-[#c9a96e]">Bonuses</span> Worth ₹25,000+
+          <h2 className="text-4xl md:text-5xl font-semibold">
+            Free <span className="text-green-500 italic">Bonuses</span> Worth ₹25,000+
           </h2>
-          <div className="w-16 h-[2px] bg-[#edd9c0] mx-auto mt-6 opacity-20" />
+          <div className="w-16 h-[2px] bg-green-500 mx-auto mt-6 opacity-30" />
         </div>
 
         {/* Cards */}
@@ -56,10 +56,10 @@ export default function Bonuses() {
             return (
               <div
                 key={b.num}
-                className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-[#c9a96e]/40 to-transparent hover:from-[#c9a96e] transition duration-500"
+                className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-green-500/30 to-transparent hover:from-green-500 transition duration-500"
               >
-                {/* Inner Card */}
-                <div className="relative h-full bg-[#2a2526]/90 backdrop-blur-xl rounded-3xl p-7 border border-white/5 group-hover:shadow-[0_20px_80px_rgba(0,0,0,0.4)] transition">
+                {/* Inner */}
+                <div className="relative h-full bg-[#121817] rounded-3xl p-7 border border-gray-800 group-hover:shadow-[0_20px_80px_rgba(0,0,0,0.6)] transition">
 
                   {/* Big number */}
                   <span className="absolute top-5 right-6 text-6xl font-bold text-white/5">
@@ -68,51 +68,51 @@ export default function Bonuses() {
 
                   {/* Icon */}
                   <div className="mb-6">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#edd9c0]/10 group-hover:bg-[#c9a96e] transition">
-                      <Icon className="w-7 h-7 text-[#edd9c0] group-hover:text-[#1f1c1d]" />
+                    <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-500/10 group-hover:bg-green-500 transition">
+                      <Icon className="w-7 h-7 text-green-400 group-hover:text-black" />
                     </div>
                   </div>
 
                   {/* Badge */}
-                  <div className="inline-block bg-[#edd9c0]/10 text-[#edd9c0]/70 text-xs px-3 py-1 rounded-full mb-3">
+                  <div className="inline-block bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full mb-3">
                     Bonus #{b.num}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-semibold text-[#edd9c0] mb-3">
+                  <h3 className="text-xl font-semibold mb-3">
                     {b.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-sm text-[#edd9c0]/60 mb-5 leading-relaxed">
+                  {/* Desc */}
+                  <p className="text-sm text-gray-400 mb-5">
                     {b.desc}
                   </p>
 
                   {/* Pricing */}
                   <div className="flex items-center gap-3">
-                    <span className="text-[#edd9c0]/30 line-through text-sm">
+                    <span className="text-gray-500 line-through text-sm">
                       {b.worth}
                     </span>
 
-                    <span className="text-[#c9a96e] text-lg font-bold">
+                    <span className="text-green-500 text-lg font-bold">
                       {b.price}
                     </span>
 
-                    <span className="text-[10px] bg-[#c9a96e] text-black px-2 py-[2px] rounded-full font-semibold">
+                    <span className="text-[10px] bg-green-500 text-black px-2 py-[2px] rounded-full font-semibold">
                       INCLUDED
                     </span>
                   </div>
 
-                  {/* Glow overlay */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-white/5 to-transparent rounded-3xl pointer-events-none" />
+                  {/* Glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-green-500/5 rounded-3xl pointer-events-none" />
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom Note */}
-        <p className="text-center text-[#edd9c0]/50 text-sm mt-12">
+        {/* Bottom */}
+        <p className="text-center text-gray-500 text-sm mt-12">
           All bonuses are included FREE when you register today.
         </p>
       </div>
