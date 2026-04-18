@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-green-500/10 blur-[120px]" />
       <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-green-400/10 blur-2xl" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-16 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-48 pb-16 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT */}
         <div>
@@ -46,23 +46,24 @@ export default function Hero() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-wrap gap-4" id="consult">
-            <a
-              href="#reserve"
-              className="bg-green-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-green-400 transition-all duration-300 hover:scale-105 shadow-lg shadow-green-500/20"
-            >
-              Reserve My Spot →
-            </a>
+          {/* CTA */}
+<div className="flex flex-wrap gap-4" id="consult">
+  <a
+    href="#reserve"
+    className="cta-btn primary-btn"
+  >
+    Reserve My Spot →
+  </a>
 
-            <a
-              href="https://wa.me/917733086753"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gray-700 text-white px-8 py-4 rounded-xl hover:border-green-400 hover:text-green-400 transition-all duration-300"
-            >
-              WhatsApp Us
-            </a>
-          </div>
+  <a
+    href="https://wa.me/917733086753"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cta-btn secondary-btn"
+  >
+    WhatsApp Us
+  </a>
+</div>
 
           {/* Urgency */}
           <p className="mt-6 text-green-400 text-sm">
