@@ -30,7 +30,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-   const [time, setTime] = useState(3600); // 1 hour = 3600 sec
+   const [time, setTime] = useState(120); // 1 hour = 3600 sec
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -41,8 +41,8 @@ export default function Header() {
   }, []);
 
   const formatTime = (seconds: number) => {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
+    const hrs = Math.floor(seconds / 120);
+    const mins = Math.floor((seconds % 120) / 60);
     const secs = seconds % 60;
 
     return `${String(hrs).padStart(2, "0")}:${String(mins).padStart(

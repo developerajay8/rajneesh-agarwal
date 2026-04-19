@@ -81,7 +81,7 @@ export default function Hero() {
 
             <div className="relative w-72 md:w-80 xl:w-96 aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
               <Image
-                src="/hero.png"
+                src="/image 4.png"
                 alt="Rajneesh Agarwal"
                 fill
                 className="object-cover object-top"
@@ -92,7 +92,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="absolute -bottom-6 -left-6 bg-[#121817] border border-gray-800 rounded-2xl px-5 py-4 shadow-xl">
               <p className="font-bold text-green-500 text-xl">
-                45K+
+                47K+
               </p>
               <p className="text-gray-400 text-xs">Followers</p>
             </div>
