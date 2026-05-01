@@ -53,43 +53,19 @@ export default function Header() {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
-    <div className="w-full bg-gradient-to-r from-[#022c22] to-[#02120b] text-white py-3 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-
-        {/* Left Text */}
-        <div className="flex items-center gap-2 text-sm md:text-base font-medium text-[#bbf7d0]">
-          <span className="text-[#22c55e]">⚡</span>
-          <span>
-            Limited Time Offer:
-            <span className="line-through text-[#bbf7d0]/50 ml-2">₹4,999</span>
-            <span className="ml-2 text-[#22c55e] font-semibold">
-              ₹999 Only
-            </span>
-          </span>
-        </div>
-
-        {/* Timer */}
-        <div className="flex items-center gap-3">
-
-          <div className="bg-black/40 border border-[#22c55e]/30 px-4 py-1.5 rounded-lg text-[#22c55e] font-semibold tracking-wider shadow-[0_0_10px_rgba(34,197,94,0.4)]">
-            {formatTime(time)}
-          </div>
-
-          <span className="text-xs md:text-sm text-[#bbf7d0]/60">
-            (Only 10 Slots Left)
-          </span>
-        </div>
-
-      </div>
-    </div>
-    <header className=" w-full z-50 backdrop-blur-xl bg-white/80 border-b border-[#edd9c0]/30">
+    
+    <header className=" w-full z-50 backdrop-blur-xl bg-black/80 border-b border-[#edd9c0]/30">
       <div className="max-w-[1240px] mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* Logo */}
-        <img src="/logo.png" className="w-[120px]" alt="logo" />
+        {/* Logo
+        <img src="/logo.png" className="w-[120px]" alt="logo" /> */}
+        <h1 className="sm:text-xl text-sm italic font-bold tracking-wide">
+  <span className="text-white">RAJNEESH</span>{" "}
+  <span className="text-[#ff6a00]">AGARWAL</span>
+</h1>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link, i) => (
             <a
               key={i}
@@ -103,24 +79,24 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         {/* CTA */}
         <a
           href="#reserve"
-          className="hidden md:inline-block bg-[#1f1c1d] text-[#edd9c0] px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
+          className=" bg-[#ff6a00] text-[#edd9c0] sm:px-10 px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
         >
           Book Now
         </a>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden">
+        {/* <button onClick={() => setOpen(!open)} className="md:hidden">
           {open ? <X /> : <Menu />}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}
-      {open && (
+      {/* {open && (
         <div className="md:hidden bg-[#1f1c1d] px-6 pb-6 space-y-4">
           {navLinks.map((link, i) => (
             <a
@@ -140,7 +116,7 @@ export default function Header() {
             Book Now
           </a>
         </div>
-      )}
+      )} */}
     </header>
     </div>
   );

@@ -4,15 +4,15 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 
 const stats = [
-  { val: "45K+", label: "Followers" },
+  { val: "47.7K+", label: "Followers" },
   { val: "5+ Yrs", label: "Experience" },
-  { val: "239+", label: "Content Posted" },
-  { val: "1 Yr+", label: "Consulting" },
+  // { val: "239+", label: "Content Posted" },
+  // { val: "1 Yr+", label: "Consulting" },
 ];
 
 export default function AboutCoach() {
   return (
-    <section className="relative bg-[#0b0f0e] py-28 px-6 overflow-hidden text-white">
+    <section className="relative bg-[#0b0f0e] sm:py-24 py-12 px-6 overflow-hidden text-white">
 
       {/* Grain Background */}
       <div
@@ -23,8 +23,8 @@ export default function AboutCoach() {
       />
 
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-green-500/10 blur-[120px]" />
-      <div className="absolute -bottom-20 right-0 w-72 h-72 rounded-full bg-green-400/10 blur-2xl" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#ff6a00]/10 blur-[120px]" />
+      <div className="absolute -bottom-20 right-0 w-72 h-72 rounded-full bg-[#ff6a00]/10 blur-2xl" />
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
 
@@ -33,7 +33,7 @@ export default function AboutCoach() {
           <div className="relative group">
 
             {/* Glow */}
-            <div className="absolute -inset-8 bg-green-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition" />
+            <div className="absolute -inset-8 bg-[#ff6a00]/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition" />
 
             {/* Image */}
             <div className="relative w-[280px] md:w-[380px] aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
@@ -49,7 +49,7 @@ export default function AboutCoach() {
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-6 bg-[#121817] border border-gray-800 px-6 py-4 rounded-2xl shadow-xl">
               {stats.slice(0, 2).map((s) => (
                 <div key={s.val} className="text-center">
-                  <p className="text-green-500 font-bold text-lg">{s.val}</p>
+                  <p className="text-[#ff6a00] font-bold text-lg">{s.val}</p>
                   <p className="text-gray-400 text-xs">{s.label}</p>
                 </div>
               ))}
@@ -60,23 +60,26 @@ export default function AboutCoach() {
         {/* TEXT */}
         <div>
           <p className="text-gray-500 text-xs tracking-[0.4em] uppercase mb-4">
-            About Your Coach
+           Rajneesh Agarwal
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight">
-            Rajneesh Agarwal
+          <h2 className="text-4xl md:text-4xl font-semibold text-white mb-4 leading-tight">
+           Experienced <span className="text-[#ff6a00]">  Café Strategist </span>
+& Startup Consultant
           </h2>
 
-          <p className="text-green-500 text-sm mb-6">
+          <p className="text-[#ff6a00] text-sm mb-6">
             Cafe Coach · Consultant · Cafe Owner — Jaipur
           </p>
 
           <p className="text-gray-400 leading-relaxed mb-5">
-            I help aspiring entrepreneurs build profitable cafes and cloud kitchens using real-world strategies that actually work.
+            Hi, I'm Rajneesh — a dedicated café strategist and food business consultant with a track record of building and scaling profitable brands. I don't just advise; I implement high-growth frameworks every day.
           </p>
 
+         
+
           <p className="text-gray-500 leading-relaxed mb-10">
-            No confusion. No wasted money. Just clear execution and real results.
+            Over the last 5+ years, I've mentored 50,000+ entrepreneurs to navigate the complex world of food business. My 5-Pillar Profitable Café Framework is designed to transform your dream into a sustainable, high-margin reality.
           </p>
 
           {/* Stats */}
@@ -84,9 +87,9 @@ export default function AboutCoach() {
             {stats.map((s) => (
               <div
                 key={s.val}
-                className="group bg-[#121817] border border-gray-800 rounded-xl p-5 text-center hover:bg-green-500 transition-all duration-300 hover:scale-105"
+                className="group bg-[#121817] border border-gray-800 rounded-xl p-5 text-center hover:bg-[#ff6a00] transition-all duration-300 hover:scale-105"
               >
-                <p className="text-green-500 group-hover:text-black font-bold text-xl">
+                <p className="text-[#ff6a00] group-hover:text-black font-bold text-xl">
                   {s.val}
                 </p>
                 <p className="text-gray-400 group-hover:text-black/70 text-xs">
@@ -100,7 +103,7 @@ export default function AboutCoach() {
           <a
             href="https://www.instagram.com/cafeconsultant_rajneesh"
             target="_blank"
-            className="inline-flex items-center gap-3 bg-[#121817] border border-gray-800 text-white px-6 py-3 rounded-xl hover:border-green-400 hover:text-green-400 transition-all duration-300"
+            className="inline-flex items-center gap-3 bg-[#121817] border border-gray-800 text-white px-6 py-3 rounded-xl hover:border-[#ff6a00] hover:text-[#ff6a00] transition-all duration-300"
           >
             <FaInstagram />
             Follow on Instagram

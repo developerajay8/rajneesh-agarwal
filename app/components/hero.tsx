@@ -13,61 +13,61 @@ export default function Hero() {
       />
 
       {/* Glow Effects */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-green-500/10 blur-[120px]" />
-      <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-green-400/10 blur-2xl" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#ff6a00]/10 blur-[120px]" />
+      <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-[#ff6a00]/10 blur-2xl" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-48 pb-16 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:pt-40 pt-30 pb-16 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT */}
         <div>
-          <h1 className="text-4xl md:text-5xl xl:text-6xl leading-[1.1] mb-6 font-bold">
-            Start & Scale Your{" "}
-            <span className="text-green-500 italic">Food Business</span>
-            <br />
-            Without Loss
+          <span className="bg-amber-700 border border-[#ff6a00] px-3 py-1 rounded-full text-[12px] ">1-on-1 Strategy Session</span>
+          <h1 className="text-4xl md:text-5xl xl:text-5xl leading-[1.1] mb-6 font-bold mt-5">
+            Want to Start Your
+Dream Café Business{" "}
+            <span className="text-[#ff6a00] italic">But Don’t Know </span>
+           
+            Where to Begin?
           </h1>
 
-          <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4 max-w-lg">
-            Even if you're a beginner. Learn proven systems to build a profitable
-            cafe, cloud kitchen or QSR business in 2025.
+          <p className="text-gray-400 text-base md:text-[16px] leading-relaxed mb-4 max-w-lg">
+            Join India's Top Café Coach for a <span className="text-white">60-minute 1-on-1 strategy call</span> — and walk away with your complete café roadmap.
           </p>
 
           {/* Price */}
-          <div className="inline-flex items-center gap-3 bg-[#121817] border border-gray-800 rounded-2xl px-5 py-3 mb-8">
+          {/* <div className="inline-flex items-center gap-3 bg-[#121817] border border-gray-800 rounded-2xl px-5 py-3 mb-8">
             <span className="text-gray-500 text-sm line-through">
               ₹999
             </span>
-            <span className="text-green-500 font-bold text-2xl">
+            <span className="text-[#ff6a00] font-bold text-2xl">
               ₹99
             </span>
             <span className="text-gray-400 text-sm">
               Consultation Call
             </span>
+          </div> */}
+
+          {/* CTA */}
+          <div className="flex flex-wrap gap-4" id="consult">
+            <a
+              href="#reserve"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#ff6a00] to-black-500 text-white"
+            >
+              Secure My 1-on-1 Slot Now
+            </a>
+
+            {/* <a
+              href="https://wa.me/917733086753"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn secondary-btn border border-[#ff6a00] text-[#ff6a00]"
+            >
+              WhatsApp Us
+            </a> */}
           </div>
 
-          {/* CTA */}
-          {/* CTA */}
-<div className="flex flex-wrap gap-4" id="consult">
-  <a
-    href="#reserve"
-    className="cta-btn primary-btn"
-  >
-    Reserve My Spot →
-  </a>
-
-  <a
-    href="https://wa.me/917733086753"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="cta-btn secondary-btn"
-  >
-    WhatsApp Us
-  </a>
-</div>
-
           {/* Urgency */}
-          <p className="mt-6 text-green-400 text-sm">
-            🔥 Only 100 Seats · Few Slots Left
+          <p className="mt-6 text-[#ff6a00] text-[12px]">
+            Only 7 Slots Available This Week <span className="text-gray-50">• Practical roadmap • Beginner friendly</span>
           </p>
         </div>
 
@@ -76,12 +76,12 @@ export default function Hero() {
           <div className="relative">
 
             {/* Border Glow */}
-            <div className="absolute -inset-4 rounded-3xl border border-green-500/20 blur-sm opacity-30" />
-            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-green-500/10 to-transparent" />
+            <div className="absolute -inset-4 rounded-3xl border border-[#ff6a00]/20 blur-sm opacity-30" />
+            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-[#ff6a00]/10 to-transparent" />
 
             <div className="relative w-72 md:w-80 xl:w-96 aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
               <Image
-                src="/image 4.png"
+                src="/hero.png"
                 alt="Rajneesh Agarwal"
                 fill
                 className="object-cover object-top"
@@ -91,14 +91,14 @@ export default function Hero() {
 
             {/* Stats */}
             <div className="absolute -bottom-6 -left-6 bg-[#121817] border border-gray-800 rounded-2xl px-5 py-4 shadow-xl">
-              <p className="font-bold text-green-500 text-xl">
-                47K+
+              <p className="font-bold text-[#ff6a00] text-xl">
+                47.7K+
               </p>
               <p className="text-gray-400 text-xs">Followers</p>
             </div>
 
             <div className="absolute -top-4 -right-4 bg-[#121817] border border-gray-800 rounded-2xl px-5 py-4 shadow-xl">
-              <p className="font-bold text-green-500 text-xl">
+              <p className="font-bold text-[#ff6a00] text-xl">
                 5 Yrs
               </p>
               <p className="text-gray-400 text-xs">Experience</p>
